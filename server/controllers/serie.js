@@ -32,7 +32,7 @@ exports.putUpdateSerie = (req, res) => {
 };
 
 exports.deleteSerie = (req, res) => {
-    Serie.findByIdAndRemove(req.params.id, req.body)
+    Serie.findByIdAndDelete(req.params.id, req.body)
         .then((data) =>
             res.json({ message: "serie deleted successfully", data })
         )
